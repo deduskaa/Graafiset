@@ -1,0 +1,4 @@
+SQLSTATE[HY000]: General error
+SQLSTATE[HY000]: General error
+SQLSTATE[HY000]: General error
+
