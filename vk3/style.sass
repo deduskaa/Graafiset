@@ -1,0 +1,121 @@
+$kasi: 8px;
+$sofia: 'Princess Sofia', cursive;
+$nelkku: 4px;
+$sata: 100%;
+$bgc1:#7EED80 40%;
+$bgc2:#CFDB5C 86%;
+$hafcolor:#25CFC3;
+
+@mixin gradient($fcolor, $scolor){
+	background-image:-moz-linear-gradient(bottom, $fcolor, $scolor);
+	background-image:-webkit-linear-gradient(bottom, $fcolor, $scolor);
+	background-image:linear-gradient(bottom, $fcolor, $scolor);
+}
+
+@mixin radius($radius){
+	 border-radius: $radius;
+	 -moz-border-radius: $radius;
+	 -webkit-border-radius: $radius;
+}
+
+
+html{
+	@include gradient($bgc1, $bgc2);
+	background-size: cover;
+	height: $sata;
+}
+
+body {
+	width: 50em;
+	margin: auto;
+	font-family: Verdana;
+	font-size: 12px;
+	height: $sata;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+header,
+article,
+footer {
+@include radius($kasi);
+  background-color:$hafcolor;
+  width: 640px;
+  border: 1px solid #000000;
+  margin-bottom: $nelkku;
+  padding: $kasi;
+}
+header h1 {
+  font-family: $sofia;
+  text-align: center;
+  font-size: 24px;
+}
+
+nav {
+  width: 640px;
+  clear: left;
+  float: left;
+  overflow: hidden;
+
+	ul {
+	  height: 40px;
+	  clear: left;
+	  float: left;
+	  position: relative;
+	  left: 50%;
+	  text-align: center;
+	}
+
+	 li {
+	  float: left;
+	  position: relative;
+	  right: 50%;
+	}
+	
+	a {
+	@include radius($nelkku);
+	  display: block;
+	  line-height: 30px;
+	  padding: 0 20px 0 20px;
+	  margin: 0 $nelkku 0 $nelkku;
+	  @include gradient( #A3F0EB 24%, #1E38E3 86%);
+	  color: #ffffff;
+	  text-decoration: none;
+	  border: 2px outset #ffffff;
+	}
+	a:hover {
+	@include gradient( #EB9BE2 24%, #EB6E77 86%);
+	}
+}
+
+
+article {
+  float: left;
+  line-height: 140%;
+
+	img {
+	@include radius($nelkku);
+	  float: right;
+	  border: 2px solid #000;
+	  margin-left: $kasi;
+	}
+	h2 {
+	  font-family: $sofia;
+	  font-size: 21.6px;
+	  line-height: 140%;
+	}
+	h3 {
+	  font-family: $sofia;
+	  font-size: 19.200000000000003px;
+	  line-height: 140%;
+	  margin-top: $kasi;
+	}
+	p {
+	  margin-bottom: 12px;
+	}
+}
+
+footer {
+  float: left;
+  text-align: center;
+}
