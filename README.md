@@ -1,3 +1,2 @@
 # Graafiset
-Labrat
-lol
+School work
